@@ -116,3 +116,9 @@ $capsule->addConnection([
     'collation' => 'utf8mb4_unicode_ci',
     'prefix' => '',
 ]);
+
+
+
+$capsule->setEventDispatcher(new Dispatcher (new Container));
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
